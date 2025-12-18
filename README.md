@@ -17,10 +17,10 @@
 2. Приложите в файл README.md текст использованных команд в GitHub.
 
 #### Ответ к заданию 1
-![Авторизация в веб-интерфейсе Zabbix](ссылка на скриншот 1)`
+![Авторизация в веб-интерфейсе Zabbix](https://github.com/Anthony13375/zabbix_netology/blob/main/img/zabbix_auth.png)`
 
 ```
-su -s
+sudo -s
 apt install postgres
 cd /tmp
 wget https://repo.zabbix.com/zabbix/7.4/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.4+ubuntu24.04_all.deb
@@ -52,16 +52,27 @@ systemctl enable zabbix-server apache2
 3. Приложите в файл README.md скриншот раздела Monitoring > Latest data для обоих хостов, где видны поступающие от агентов данные.
 4. Приложите в файл README.md текст использованных команд в GitHub
 
+`![Hosts](https://github.com/Anthony13375/zabbix_netology/blob/main/img/hosts.png)`
+
+`![Agent log](https://github.com/Anthony13375/zabbix_netology/blob/main/img/agent_log.png)`
+
+`![Latest Data](https://github.com/Anthony13375/zabbix_netology/blob/main/img/latest_data.png)`
 
 ```
-Поле для вставки кода...
-....
-....
-....
-....
+cd /tmp
+wget https://repo.zabbix.com/zabbix/7.4/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.4+ubuntu24.04_all.deb
+dpkg -i zabbix-release_latest_7.4+ubuntu24.04_all.deb
+apt update
+apt install zabbix-agent
+systemctl restart zabbix-agent
+systemctl enable zabbix-agent
+systemctl status zabbix-agent
+vim /etc/zabbix/zabbix_agentd.conf 
+systemctl restart zabbix-agent
+systemctl status zabbix-agent
+tail -10 /var/log/zabbix/zabbix_agentd.log 
+cat /var/log/zabbix/zabbix_agentd.log 
 ```
-
-![Название скриншот 2](ссылка на скриншот 2)`
 
 
 ---
