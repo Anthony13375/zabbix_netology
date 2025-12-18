@@ -52,11 +52,13 @@ systemctl enable zabbix-server apache2
 3. Приложите в файл README.md скриншот раздела Monitoring > Latest data для обоих хостов, где видны поступающие от агентов данные.
 4. Приложите в файл README.md текст использованных команд в GitHub
 
-`![Hosts](https://github.com/Anthony13375/zabbix_netology/blob/main/img/hosts.png)`
+#### Ответ к заданию 2
 
-`![Agent log](https://github.com/Anthony13375/zabbix_netology/blob/main/img/agent_log.png)`
+![Hosts](https://github.com/Anthony13375/zabbix_netology/blob/main/img/hosts.png)
 
-`![Latest Data](https://github.com/Anthony13375/zabbix_netology/blob/main/img/latest_data.png)`
+![Agent log](https://github.com/Anthony13375/zabbix_netology/blob/main/img/agent_log.png)
+
+![Latest Data](https://github.com/Anthony13375/zabbix_netology/blob/main/img/latest_data.png)
 
 ```
 cd /tmp
